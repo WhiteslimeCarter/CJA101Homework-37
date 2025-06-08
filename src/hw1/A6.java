@@ -6,16 +6,20 @@ package hw1;
   5 + “5”
   並請用註解各別說明答案的產生原因
  */
-public class Exercise6 {
+public class A6 {
 
 	public static void main(String[] args) {
+		
+		char ch = '5';
+		int i = ch;
+		System.out.println(i); //字元十進位值
 
 		System.out.println(5 + 5);
-		// 5+5代表數字相加
-		System.out.println(5 + '5' - 5);
-		// 5+'5'代表數字和字元值相加 ??
+		// 5+5 代表數字相加.
+		System.out.println(5 + '5');
+		// 5+'5'代表數字 5 和字元十進位值 '5'=53 相加.
 		System.out.println(5 + "5");
-		// 5+"5"代表的是字串連接
+		// 5+"5"代表的是字串連接.
 	}
 
 }

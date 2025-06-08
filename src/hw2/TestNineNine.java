@@ -1,6 +1,6 @@
 package hw2;
 
-/*輸出九九乘法表
+/* A8.輸出九九乘法表
  * 1.使用for迴圈+while迴圈
  * 2.使用for迴圈+do while迴圈
  * 3.使用while迴圈+do while迴圈
