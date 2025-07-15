@@ -5,27 +5,50 @@ package hw5;
 
 public class A5 {
 
+	// 方法：產生8位驗證碼
 	public String genAuthCode() {
-//		使用字符代碼 Unicode
-		String acro[];
-		for (int i = 0; i < 8; i++) {
-			int r = (int) (Math.random() * 123);
-			if (r >= 65 && r <= 90) {
-			} else if (r >= 97 && r <= 122) {
-			} else if (r >= 48 && r <= 57) {
-			}
+		String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+		StringBuilder code = new StringBuilder();
 
+		for (int i = 0; i < 8; i++) {
+			int index = (int) (Math.random() * chars.length());
+			code.append(chars.charAt(index));
 		}
 
-		String Code = "password";
-		return Code;
+		return code.toString();
 	}
 
+	// 主程式：印出驗證碼
 	public static void main(String[] args) {
-		System.out.print("本次隨機產生驗證碼為：");
-
+		A5 generator = new A5();
+		String authCode = generator.genAuthCode();
+		System.out.println("本次隨機產生驗證碼為：" + authCode);
 	}
 }
+
+//public class A5 {
+//
+//	public String genAuthCode() {
+//		使用字符代碼 Unicode
+//		String acro[];
+//		for (int i = 0; i < 8; i++) {
+//			int r = (int) (Math.random() * 123);
+//			if (r >= 65 && r <= 90) {
+//			} else if (r >= 97 && r <= 122) {
+//			} else if (r >= 48 && r <= 57) {
+//			}
+//
+//		}
+//
+//		String Code = "password";
+//		return Code;
+//	}
+//
+//	public static void main(String[] args) {
+//		System.out.print("本次隨機產生驗證碼為：");
+//
+//	}
+//}
 
 /*
  * 定義可能的字符集（包含大寫字母 A-Z、小寫字母 a-z 和數字 0-9）

@@ -28,29 +28,33 @@ MyRectangle：
 */
 
 public class MyRectangle {
+	// (1) 屬性
 	private double width;
 	private double depth;
-	
-	// 使用public MyRectangle(double width, double depth)建構子建立物件，設定width, depth為10, 20
-	// public MyRectangle()建構子建立物件，設定width, depth為10, 20
-	public MyRectangle() { 
-		MyRectangle w = new MyRectangle();
-		MyRectangle d = new MyRectangle();
-	}
-		
-	public MyRectangle(double width, double depth) {
-		
-	}
-	
-	public void setWidth(double width) {
-		width = 10.0;
-	}
-	
-	public void setDepth(double depth) {
-		depth = 20.0;
-	}
-//	public double getArea(double width, double depth){ // getArea()印出結果
-//		return 
-//	}
 
+	// (3-1) 無參數建構子
+	public MyRectangle() {
+		// 可不寫任何內容，保留預設
+	}
+
+	// (3-2) 有參數建構子
+	public MyRectangle(double width, double depth) {
+		this.width = width;
+		this.depth = depth;
+	}
+
+	// (2-1) 設定寬度
+	public void setWidth(double width) {
+		this.width = width;
+	}
+
+	// (2-2) 設定深度
+	public void setDepth(double depth) {
+		this.depth = depth;
+	}
+
+	// (2-3) 計算面積
+	public double getArea() {
+		return width * depth;
+	}
 }
